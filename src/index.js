@@ -1,10 +1,6 @@
-console.log("INDEX CALISTI");
+import dotenv from 'dotenv';
+dotenv.config();
 
-import mongoose from "mongoose";
+import { setupServer } from './server.js';
 
-mongoose
-  .connect(
-    "mongodb+srv://KULLANICI:SIFRE@cluster0.nb68qey.mongodb.net/test"
-  )
-  .then(() => console.log("CONNECTED"))
-  .catch((e) => console.log("ERROR:", e.message));
+setupServer();
